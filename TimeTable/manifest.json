@@ -1,0 +1,23 @@
+{
+    "manifest_version":2,
+    "name":"我的课表",
+    "version":"0.12",
+    "description":"旧式课表查询",
+    "icons":{
+        "16":"images/icon16.png",
+        "48":"images/icon48.png",
+        "128":"images/icon128.png"
+    },
+    "browser_action":{
+        "default_icon":{
+            "19":"images/icon19.png",
+            "38":"images/icon38.png"
+        },
+        "default_title":"我的课表",
+        "default_popup":"popup.html"
+    },
+    "options_page":"options.html",
+    "permissions":[
+        "http://202.192.240.29/"
+    ]
+}
