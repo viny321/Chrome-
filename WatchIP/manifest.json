@@ -17,7 +17,12 @@
         "default_popup": "popup.html"
     },
     "options_page":"options.html",
+    "background":{
+        "scripts":[
+            "js/status.js"
+        ]
+    },
     "permissions":[
-        "http://202.192.240.29/"
+        "http://2017.ip138.com/ic.asp"
     ]
 }

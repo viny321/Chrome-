@@ -12,13 +12,23 @@ function httpRequest(url,callback){
 }
 
 /**
- * 
+ * 150805:1005472
+ * 160806:104384054
+ * 2017-2018-2:201702
  */
 function timetable(){
-    httpRequest('http://202.192.240.29/xsbjkbcx!xsAllKbList.action?xnxqdm=201702&bjdm=1005472',function(str){
-        var jsonarr = JSON.parse(str);
-        jsonarr2table(jsonarr);
-    }); 
+    var bjdm = getbjdm();
+    httpRequest('http://202.192.240.29/xsbjkbcx!xsAllKbList.action?xnxqdm=201701&bjdm='+bjdm,ajaxback); 
+}
+
+/**
+ * @author 独秀
+ * @param {*} str 
+ */
+function ajaxback(str) {
+    console.info(str);
+    var jsonarr = JSON.parse(str);
+    jsonarr2table(jsonarr);
 }
 
 /**
@@ -108,5 +118,14 @@ function transforms(kcobj){
     }
     return kcobj.kcmc+"<br>第"+arr.toString()+"周<br>"+kcobj.jxcdmcs+"  "+kcobj.teaxms+"<br>";
 }
-
+/**
+ * 获取select 下拉框中用户选择的班级对应的班级代码
+ * 并把该班级放到表头
+ */
+function getbjdm() {
+    var selects = document.getElementById("bjdm");
+    var index = selects.selectedIndex;// selectedIndex代表的是你所选中项的index
+    document.getElementById("thead").innerHTML = selects.options[index].text;
+    return selects.options[index].value;
+}
 document.getElementById("btnclick").onclick = timetable;
