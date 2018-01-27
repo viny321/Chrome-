@@ -6,7 +6,7 @@ function status() {
         httpRequest('http://2017.ip138.com/ic.asp',function(str){
             flag = false;
             ip = str;
-            chrome.runtime.sendMessage(ip,function() {
+            chrome.runtime.sendMessage(ip,function(response) {
                 
             });
         });
