@@ -85,7 +85,7 @@ function arr2Table(arr) {
 function transforms(kcobj){
     var oldarr = kcobj.zcs.split(",");//对象提取字符串 转数组
 
-    oldarr.sort(function(a,b){return a-b});//数字升序
+    oldarr.sort((a,b)=>a-b);//数字升序
     var zcs = "";
     var arr = new Array;
     for (let index = 0; index < oldarr.length; index++) {

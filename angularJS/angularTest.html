@@ -1,14 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="myApp">
 <head>
 <meta charset="utf-8">
-<script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+<title>testangular</title>
 </head>
 <body>
 
-<div ng-app="">
- 	<p>名字 : <input type="text" ng-model="name"></p>
+<div>
+
+	<p>名字 : <input type="text" ng-model="name"></p>
  	<h1>Hello {{name}}</h1>
+
+<div ng-controller="TSest1">
+	<p>{{text}}</p>
 </div>
+<p>测试GIT</p>
+</div>
+<script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+<script src="js/test_mvc.js"></script>
 </body>
 </html>
