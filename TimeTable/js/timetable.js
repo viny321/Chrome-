@@ -18,7 +18,8 @@ function httpRequest(url,callback){
  */
 function timetable(){
     var bjdm = getbjdm();
-    httpRequest('http://202.192.240.29/xsbjkbcx!xsAllKbList.action?xnxqdm=201701&bjdm='+bjdm,ajaxback); 
+    var xqdm = getxqdm();
+    httpRequest('http://202.192.240.29/xsbjkbcx!xsAllKbList.action?xnxqdm='+xqdm+'&bjdm='+bjdm,ajaxback); 
 }
 
 /**
@@ -128,4 +129,10 @@ function getbjdm() {
     document.getElementById("thead").innerHTML = selects.options[index].text;
     return selects.options[index].value;
 }
+function getxqdm() {
+    var selects = document.getElementById("xqdm");
+    var index = selects.selectedIndex;// selectedIndex代表的是你所选中项的index
+    return selects.options[index].value;
+}
+
 document.getElementById("btnclick").onclick = timetable;
