@@ -3,7 +3,7 @@ var ip = "";
 
 function status() {
     if(flag){//是否为第一次请求，如果是，则请求IP，否则直接返回结果即可
-        httpRequest('http://2017.ip138.com/ic.asp',function(str){
+        httpRequest('http://2018.ip138.com/ic.asp',function(str){
             flag = false;
             ip = str;
             chrome.runtime.sendMessage(ip,function(response) {
