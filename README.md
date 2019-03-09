@@ -1,4 +1,4 @@
-## vinyforChrome
+## Chrome-插件
 chrome插件开发
 
 
